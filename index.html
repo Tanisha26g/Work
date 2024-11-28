@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar .menu {
+            display: flex;
+        }
+
+        .menu a {
+            margin-left: 10px;
+        }
+
+        .container {
+    display: flex;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .right img {
+        max-width: 100%;
+        padding-right: 50px;
+    }
+        
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyLogo</div>
+        <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="about.html">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <h1><b>My Resume</b></h1>
+    
+    <div class="container">
+    <div class="left">
+        <h2><b>Personal Information</b></h2>
+    <p><b>Name:</b> Tanisha</p>
+    <p><b>Address:</b> 2633-E, Sudama Nagar, Indore</p>
+    <p><b>Email:</b>
+        <a href="mailto:tanishag.2608@gmail.com">tanishag.2608@gmail.com</a>
+    </p>
+    <p><b>Phone:</b> 7000023082</p>
+    </div>
+    <div class="right">
+        <img src="data:image/jpeg;base64,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">
+    </div>
+    </div>
+
+
+    <h2><b>Education</b></h2>
+    <table border="-">
+        <tr>
+            <th>Year</th>
+            <th>Qualification</th>
+            <th>Institute</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>2020</td>
+            <td>10th</td>
+            <td>CPS</td>
+            <td>96%</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>12th</td>
+            <td>CPS</td>
+            <td>91%</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>B.Tech</td>
+            <td>AITR</td>
+            <td>7 CGPA</td>
+        </tr>
+    </table>
+   
+    <h2><b>Interests</b></h2>
+    <p><b>Web Development</b></p>
+    <p><b>Programming</b></p>
+    <p><b>Reading</b></p>
+    <p><b>Travelling</b></p>
+    <h2><b>Languages</b></h2>
+    <p><b>English</b></p>
+    <p><b>Hindi</b></p>
+    <p><b>Marathi</b></p>
+    <h2><b>References</b></h2>
+    <p><b>Mr. ABC</b></p>
+    <p><b>XYZ Company</b></p>
+    <p><b>Email:</b>
+        <a href="mailto: "></a>
+    </p>
+    <p><b>Phone:</b> 1234567890</p>
+    <p><b>Mr. PQR</b></p>
+    <p><b>ABC Company</b></p>
+    <p><b>Email:</b>
+        <a href="mailto: "></a>
+    </p>
+    <p><b>Phone:</b> 1234567890</p>
+
+</body>
+
+</html>
