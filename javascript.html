@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Hello -->
+     To-Do App
+     <button>ToDo</button>
+
+    <script>
+        // var obj = {
+        //     name: "John",
+        //     age: 30,
+        //     address : {
+        //         street: "123 Main St",
+        //         zip: 10001
+        //     }
+        // };
+        
+        // console.log(obj.name);
+
+        // for (var x in obj) {
+        //     var ab= obj[x] + " " + x;
+        //     console.log(ab);
+        // }
+
+        // var r=5;
+
+        // for(var i=0; i<r ; i++) {
+        //     console.log(" ".repeat(r-i) + "*".repeat(2*i+1));
+            
+        // }
+        // for (var i = r; i >=0; i--) {
+        //         console.log(" ".repeat(r - i) + "*".repeat(2 * i + 1));
+
+        //     }
+
+        // var n=0,m=1,o=0;
+        // for(var i=0; i<7; i++) {
+        //     //fibonacci series
+        //     n=m;
+        //     m=o;
+        //     o=n+m;
+        //     console.log(o);
+        // }
+
+        // //prime number or not most optimal solution
+        // var num=21;
+        // for(var i=2; i<num/2; i++) {
+        //     if(num%i==0) {
+        //         console.log("Not a prime number");
+        //         break;
+        //     }
+        //     else {
+        //         console.log("Prime number");
+        //         break;
+        //     }
+        // }
+
+        var todo=[];
+
+        while(true){
+            var choice= prompt("Enter 1 to add task, 2 to read and 3 to delete task");
+            if(choice==1) {
+                var task= prompt("Enter the task");
+                todo.push(task);
+            }
+            else if(choice==2) {
+                for(var i=0; i<todo.length; i++) {
+                    console.log(todo[i]);
+                }
+            }
+            else if (choice == 3) {
+                var index = prompt("Enter the index to delete");
+                todo.splice(index, 1);
+            }
+            else {
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>

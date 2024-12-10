@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" style="color: red;"></span>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <span id="ageError" style="color: red;"></span>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <span id="emailError" style="color: red;"></span>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>                                             
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+                // Prevent form submission
+                event.preventDefault();
+
+                // // Clear previous errors
+                // document.getElementById('nameError').textContent = '';
+                // document.getElementById('emailError').textContent = '';
+                // document.getElementById('ageError').textContent = '';
+
+                // Get form values
+                let name = document.getElementById('name');
+                let email = document.getElementById('email');
+                let age = document.getElementById('age');
+
+                let isValid = true;
+                if (age < 0) {
+                    isValid = false;
+                    document.getElementById('ageError').textContent = 'Age should be a non-negative integer.';
+                }
+
+                // Validate name (not empty)
+                if (name === '') {
+                    document.getElementById('nameError').textContent = 'Name is required.';
+                    isValid = false;
+                }
+
+                // Validate email (basic pattern check)
+                let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if (email === '') {
+                    document.getElementById('emailError').textContent = 'Email is required.';
+                    isValid = false;
+                } else if (!emailPattern.test(email)) {
+                    document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                    isValid = false;
+                }
+
+                // If form is valid, submit the form or display a success message
+                if (isValid) {
+                    alert('Form is valid and ready to be submitted!');
+                }
+
+                console.log(name.value)
+
+            });
+    </script>
+</body>
+
+</html>
